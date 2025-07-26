@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: orange;
+}
+
+body{
+    background-color: black;
+}
+
+ul li{
+   
+    color: orange;
+    text-decoration: underline;
+}
+
+p{
+    color: orange;
+}
+
+ul li:hover{
+    color: blueviolet;
+}
