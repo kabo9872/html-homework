@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple calculator</h1>
+    <p>perform all operations using java script</p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+</body>
+
+<script>
+
+    var num1 = 10;
+    var num2 = 2;
+
+    var add = num1 + num2;
+    var sub = num1 - num2;
+    var mul = num1 * num2;
+    var div = num1 / num2;
+
+    document.getElementById("add").innerHTML = "the added value is:" + add;
+     document.getElementById("sub").innerHTML = "the subtracted value is:" + sub;
+      document.getElementById("mul").innerHTML = "the multiplied value is:" + mul;
+       document.getElementById("div").innerHTML = "the divided value is:" + div;
+</script>
+</html>
