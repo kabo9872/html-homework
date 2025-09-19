@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript datatypes, let keywords and loops</h2>
+    <p id="result"></p>
+</body>
+<script>
+    var i; // i is undefined
+    var text = " ";
+    {
+        let i = 0; // assigning a value for i only within the block
+
+        while (i<10) {
+            text += "The value inside the block : " + i + "</br>";
+            i++;
+        }
+        document.getElementById("result").innerHTML = text;
+    }
+
+    document.write("The value of i outside the block is : " + i);
+</script>
+</html>
