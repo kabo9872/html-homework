@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heera Bank App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bank app 2.css">
+</head>
+
+<body>
+
+    <div class="container app-container mt-4">
+
+        <h2 class="text-center mb-4">Heera's Expense Tracker</h2>
+
+       
+        <div class="balance-box mb-4">
+            <h3>Balance: R <span id="balance">0</span></h3>
+        </div>
+
+        <div class="row g-4">
+
+           
+            <div class="col-md-6">
+                <div class="entry-box p-3">
+                    <h4>Income</h4>
+                    <input id="incomeInput" class="form-control" placeholder="Enter amount">
+                    <button class="btn btn-light mt-2 w-100" onclick="addIncome()">Add Income</button>
+                </div>
+            </div>
+
+           
+            <div class="col-md-6">
+                <div class="entry-box p-3">
+                    <h4>Expense</h4>
+                    <input id="expenseInput" class="form-control" placeholder="Enter amount">
+                    <button class="btn btn-light mt-2 w-100" onclick="addExpense()">Add Expense</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="history-box p-3 mt-4">
+            <h4>Transaction History</h4>
+            <ul id="historyList" class="list-group history-list"></ul>
+        </div>
+
+    </div>
+
+    
+    <script>
+        let balance = 0;
+
+        function updateBalance(value) {
+            balance += value;
+            document.getElementById("balance").textContent = balance;
+        }
+
+        function addIncome() {
+            const amount = Number(document.getElementById("incomeInput").value);
+            if (amount > 0) {
+                updateBalance(amount);
+                addToHistory("Income", amount);
+                document.getElementById("incomeInput").value = "";
+            }
+        }
+
+        function addExpense() {
+            const amount = Number(document.getElementById("expenseInput").value);
+            if (amount > 0) {
+                updateBalance(-amount);
+                addToHistory("Expense", amount);
+                document.getElementById("expenseInput").value = "";
+            }
+        }
+
+        function addToHistory(type, amount) {
+            const item = document.createElement("li");
+            item.className = "list-group-item";
+            item.textContent = `${type}: R ${amount}`;
+            document.getElementById("historyList").prepend(item);
+        }
+    </script>
+
+</body>
+
+</html>

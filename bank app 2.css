@@ -1,0 +1,56 @@
+
+body {
+    background: #ededed;
+    font-family: Arial, sans-serif;
+}
+
+
+.app-container {
+    max-width: 800px;
+}
+
+
+.balance-box {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.entry-box {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.entry-box input {
+    margin-top: 10px;
+}
+
+
+.entry-box button {
+    border: 1px solid #bbb;
+}
+
+
+.history-box {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.history-list li {
+    background: #fafafa;
+    border: 1px solid #ddd;
+}
+
+
+.entry-box button:hover {
+    background: #f0f0f0;
+}
+
+.history-list li:hover {
+    background: #f5f5f5;
+}
