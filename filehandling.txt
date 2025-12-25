@@ -1,0 +1,5 @@
+Roy is a class 8 student.
+He is the class monitor.
+This file stores student information.
+Students' favorite subjects are also recorded.
+The teacher uses this file to track all students.
