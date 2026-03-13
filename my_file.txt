@@ -1,0 +1,2 @@
+
+Hi, my name is Kabo. I am learning Python programming and file handling.
